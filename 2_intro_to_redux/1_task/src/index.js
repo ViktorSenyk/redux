@@ -6,7 +6,7 @@ const DECREMENT = 'COUNTER/DECREMENT';
 export const increment = () => ({ type: INCREMENT });
 export const decrement = () => ({ type: DECREMENT });
 
-export const counterReducer = (state = 0, action) => {
+const counterReducer = (state = 0, action) => {
   switch (action.type) {
     case INCREMENT:
       return state + 1;
@@ -18,10 +18,3 @@ export const counterReducer = (state = 0, action) => {
 };
 
 export const store = createStore(counterReducer);
-
-store.dispatch(increment())
-store.dispatch(increment())
-store.dispatch(increment());
-store.dispatch(decrement());
-
-console.log(store.getState);
