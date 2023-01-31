@@ -1,5 +1,5 @@
 import store from './store';
-import { counterIncrement, counterDecrement, counterReset } from './counter.actions';
+import { increment, decrement, reset } from './counter.actions';
 import { addUser, deleteUser, updateUser } from './users.actions';
 
 store.subscribe(() => console.log(store.getState()));
@@ -10,12 +10,12 @@ store.dispatch(addUser({ id: 3, name: 'Din' }));
 
 store.dispatch(deleteUser(2));
 
-store.dispatch(counterDecrement());
-store.dispatch(counterDecrement());
-store.dispatch(counterDecrement());
+store.dispatch(decrement());
+store.dispatch(decrement());
+store.dispatch(decrement());
 
-store.dispatch(counterReset());
+store.dispatch(reset());
 
-store.dispatch(counterIncrement());
+store.dispatch(increment());
 
 store.dispatch(updateUser(1, {name: 'Viktor', age: 27}))
