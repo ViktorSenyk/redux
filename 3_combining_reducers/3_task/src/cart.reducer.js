@@ -1,4 +1,4 @@
-import { PRODUCT_ADD, PRODUCT_REMOVE } from './card.actions';
+import { PRODUCT_ADD, PRODUCT_REMOVE } from './cart.actions';
 
 const productsReducer = (state = { products: [] }, action) => {
   switch (action.type) {
