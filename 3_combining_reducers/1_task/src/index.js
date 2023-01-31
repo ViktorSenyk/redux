@@ -15,8 +15,8 @@ store.dispatch(decrement());
 store.dispatch(decrement());
 store.dispatch(decrement());
 
-// store.dispatch(reset());
+store.dispatch(reset());
 
-store.dispatch(increment());
+// store.dispatch(increment());
 
 // store.dispatch(updateUser(1, {name: 'Viktor', age: 27}))

@@ -7,33 +7,11 @@ const counterReducer = (state = 0, action) => {
     case DECREMENT:
       return state - 1;
     case RESET:
-      return state = 1;
+      return (state = 0);
 
     default:
       return state;
   }
 };
-
-// const counterReducer = (state = { counter: 0 }, action) => {
-//   switch (action.type) {
-//     case INCREMENT:
-//       return {
-//         ...state,
-//         counter: state.counter + 1,
-//       };
-//     case DECREMENT:
-//       return {
-//         ...state,
-//         counter: state.counter - 1,
-//       };
-//     case RESET:
-//       return {
-//         ...state,
-//         counter: 0,
-//       };
-//     default:
-//       return state;
-//   }
-// };
 
 export default counterReducer;
