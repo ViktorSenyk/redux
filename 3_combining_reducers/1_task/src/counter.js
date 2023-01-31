@@ -4,9 +4,9 @@ const INCREMENT = 'COUNTER/INCREMENT';
 const DECREMENT = 'COUNTER/DECREMENT';
 const RESET = 'COUNTER/RESET';
 
-const increment = () => ({ type: INCREMENT });
-const decrement = () => ({ type: DECREMENT });
-const reset = () => ({ type: RESET });
+export const increment = () => ({ type: INCREMENT });
+export const decrement = () => ({ type: DECREMENT });
+export const reset = () => ({ type: RESET });
 
 const counterReducer = (state = 0, action) => {
   switch (action.type) {
@@ -22,14 +22,7 @@ const counterReducer = (state = 0, action) => {
   }
 };
 
-const store = createStore(
+export const store = createStore(
   counterReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
-
-store.subscribe(() => console.log(store.getState()));
-
-store.dispatch(increment());
-store.dispatch(increment());
-store.dispatch(increment());
-store.dispatch(reset());
