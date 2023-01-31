@@ -1,25 +1,39 @@
-import { INCREMENT, DECREMENT, RESET } from "./counter.actions";
+import { INCREMENT, DECREMENT, RESET } from './counter.actions';
 
-const counterReducer = (state = { counter: 0 }, action) => {
+const counterReducer = (state = 0, action) => {
   switch (action.type) {
     case INCREMENT:
-      return {
-        ...state,
-        counter: state.counter + 1,
-      };
+      return state + 1;
     case DECREMENT:
-      return {
-        ...state,
-        counter: state.counter - 1,
-      };
+      return state - 1;
     case RESET:
-      return {
-        ...state,
-        counter: 0,
-      };
+      return state = 1;
+
     default:
       return state;
   }
 };
+
+// const counterReducer = (state = { counter: 0 }, action) => {
+//   switch (action.type) {
+//     case INCREMENT:
+//       return {
+//         ...state,
+//         counter: state.counter + 1,
+//       };
+//     case DECREMENT:
+//       return {
+//         ...state,
+//         counter: state.counter - 1,
+//       };
+//     case RESET:
+//       return {
+//         ...state,
+//         counter: 0,
+//       };
+//     default:
+//       return state;
+//   }
+// };
 
 export default counterReducer;
