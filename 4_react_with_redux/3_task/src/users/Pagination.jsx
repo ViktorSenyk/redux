@@ -14,7 +14,7 @@ export default class Pagination extends Component {
         <button
           className="btn"
           onClick={() => goNext()}
-          disabled={currentPage + 1 === lastPageNumber}
+          disabled={currentPage === lastPageNumber - 1}
         >
           {currentPage !== lastPageNumber - 1 && '→'}
         </button>
