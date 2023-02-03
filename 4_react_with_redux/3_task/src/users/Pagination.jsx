@@ -5,7 +5,7 @@ export default class Pagination extends Component {
     const { currentPage, goNext, goPrev, totalItems } = this.props;
     const lastPageNumber = Math.ceil(totalItems / 3);
     const isPrevPageAvailable = currentPage === 0;
-    const isNextPageAvailable = currentPage + 1 !== lastPageNumber;
+    const isNextPageAvailable = currentPage !== lastPageNumber - 1;
 
     return (
       <div className="pagination">
