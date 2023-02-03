@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 export default class Pagination extends Component {
   render = () => {
-    const { currentPage, goNext, goPrev, totalItems } = this.props;
-    const lastPageNumber = Math.ceil(totalItems / 3);
+    const { currentPage, goNext, goPrev, totalItems, itemsPerPage } = this.props;
+    const lastPageNumber = Math.ceil(totalItems / itemsPerPage);
     const isPrevPageAvailable = currentPage === 0;
     const isNextPageAvailable = currentPage !== lastPageNumber - 1;
 

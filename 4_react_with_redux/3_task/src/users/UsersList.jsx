@@ -7,7 +7,11 @@ import User from './User';
 class UsersList extends Component {
   render = () => {
     const { users, currentPage, goNext, goPrev } = this.props;
-    const usersForCurrentPage = users.slice(currentPage * 3, (currentPage + 1) * 3);
+    const itemsPerPage = 3;
+    const usersForCurrentPage = users.slice(
+      currentPage * itemsPerPage,
+      (currentPage + 1) * itemsPerPage,
+    );
 
     return (
       <>
@@ -16,6 +20,7 @@ class UsersList extends Component {
           goPrev={goPrev}
           currentPage={currentPage}
           totalItems={users.length}
+          itemsPerPage={itemsPerPage}
         />
         <ul className="users">
           {usersForCurrentPage.map(userData => (
