@@ -8,6 +8,7 @@ class UsersList extends Component {
   render = () => {
     const { users, currentPage, goNext, goPrev } = this.props;
     const usersForCurrentPage = users.slice(currentPage * 3, (currentPage + 1) * 3);
+
     return (
       <>
         <Pagination
