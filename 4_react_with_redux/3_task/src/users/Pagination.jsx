@@ -5,7 +5,7 @@ export default class Pagination extends Component {
     const { currentPage, goNext, goPrev, totalItems, itemsPerPage } = this.props;
     const lastPageNumber = Math.ceil(totalItems / itemsPerPage);
     const isPrevPageAvailable = currentPage === 0;
-    const isNextPageAvailable = currentPage !== lastPageNumber - 1;
+    const isNextPageAvailable = currentPage === lastPageNumber - 1;
 
     return (
       <div className="pagination">
@@ -13,8 +13,8 @@ export default class Pagination extends Component {
           {!isPrevPageAvailable && '←'}
         </button>
         <span className="pagination__page">{currentPage + 1}</span>
-        <button className="btn" onClick={() => goNext()} disabled={!isNextPageAvailable}>
-          {isNextPageAvailable && '→'}
+        <button className="btn" onClick={() => goNext()} disabled={isNextPageAvailable}>
+          {!isNextPageAvailable && '→'}
         </button>
       </div>
     );
