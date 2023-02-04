@@ -1,14 +1,25 @@
 import React, { Component } from 'react';
 
-export default class User extends Component {
-  render = () => {
-    const { name, age } = this.props;
+// export default class User extends Component {
+//   render = () => {
+//     const { name, age } = this.props;
 
-    return (
-      <li className="user">
-        <span className="user__name">{name}</span>
-        <span className="user__age">{age}</span>
-      </li>
-    );
-  };
-}
+//     return (
+//       <li className="user">
+//         <span className="user__name">{name}</span>
+//         <span className="user__age">{age}</span>
+//       </li>
+//     );
+//   };
+// }
+
+const User = ({ name, age }) => {
+  return (
+    <li className="user">
+      <span className="user__name">{name}</span>
+      <span className="user__age">{age}</span>
+    </li>
+  );
+};
+
+export default User;
