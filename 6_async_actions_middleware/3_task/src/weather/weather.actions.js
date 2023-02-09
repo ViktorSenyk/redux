@@ -8,5 +8,5 @@ export const addWeatherToStoreAction = weatherData => ({
   payload: { weatherData },
 });
 
-export const getWeatherAction = () => dispatch =>
+export const getWeatherData = () => dispatch =>
   getWeatherGateway().then(weatherData => dispatch(addWeatherToStoreAction(weatherData)));
