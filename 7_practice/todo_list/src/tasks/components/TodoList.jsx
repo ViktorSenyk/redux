@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { getTasksSelector, getSortedTasksSelector } from '../tasks.selectors';
+import { getSortedTasksSelector } from '../tasks.selectors';
 import * as tasksActions from '../tasks.actions';
 import PropTypes from 'prop-types';
 import CreateTaskInput from './CreateTaskInput';
